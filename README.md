@@ -20,7 +20,7 @@ Project is created with:
 * [Nest Framework](https://nestjs.com)
 * [PostgreSQL](https://www.postgresql.org)
 * [Swagger](https://swagger.io)
-* 
+* [Jest](https://jestjs.io)
 ---
 
 ## 📰 Documentação
@@ -29,6 +29,14 @@ Swagger Open API 🔥
 ```
 $ npm run dev:server
 $ localhost:3000/docs
+```
+---
+
+## 🔧 Testes
+Testes realizados com Jest 🔥
+
+```
+$ npm test
 ```
 ---
 
