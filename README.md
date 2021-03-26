@@ -6,17 +6,17 @@
 * [Documentação](#documentação)
 
 ## Informações Gerais
-API REST foi desenvolvida para buscar as informações referente a informações sobre filmes.
-As informações dos filmes serão obtidas pela API: http://www.omdbapi.com/
+API REST com CRUD e autenticação
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/carolineccorrea/api-nestjs)
 ![GitHub](https://img.shields.io/github/license/carolineccorrea/api-nestjs)
 ![GitHub language count](https://img.shields.io/github/languages/count/carolineccorrea/api-nestjs)
 ![GitHub top language](https://img.shields.io/github/languages/top/carolineccorrea/api-nestjs)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=carolineccorrea_api-nestjs&metric=alert_status)](https://sonarcloud.io/dashboard?id=carolineccorrea_api-nestjs)
 
 
 ## 🚀 Technologias
-Project is created with: 
+Projeto foi criado com: 
 * [Nest Framework](https://nestjs.com)
 * [PostgreSQL](https://www.postgresql.org)
 * [Swagger](https://swagger.io)
