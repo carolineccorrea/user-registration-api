@@ -93,6 +93,18 @@ $ npm run dev:server
 
 ```
 
+* Um Administrador pode Listar Usuários ( necesário token do admin )
+```
+{
+  "name": "admin",
+  "email": "admin@email.com",
+  "password": "admin",
+  "passwordConfirmation": "admin"	
+}
+
+```
+
+
 
 * ENVIAR EMAIL DE RECUPERAÇÃO DE SENHA ( use um email válido para receber a mensagem na sua caixa de entrada )
 * http://localhost:3000/auth/send-recover-email
