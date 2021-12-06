@@ -9,6 +9,7 @@ import {
     ForbiddenException,
     Patch,
     Delete,
+    Query,
 } from '@nestjs/common';
 import { UsersService } from './services/users.service';
 import { AuthGuard } from '@nestjs/passport';
@@ -20,11 +21,23 @@ import { ReturnUserDto } from './dtos/return-user.dto';
 import { GetUser } from 'src/auth/decorators/get-user.decorator';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { User } from './entities/user.entity';
+import { GetAllUsersDto } from './dtos/get-users.dto';
+import { NOMEM } from 'dns';
+import { Serializer } from 'v8';
+import { Serialize } from 'src/interceptors/serialize.iterceptor';
 
 @Controller('users')
 @UseGuards(AuthGuard(), RolesGuard)
 export class UsersController {
     constructor(private usersService: UsersService) { }
+
+    @Serialize(GetAllUsersDto)
+    @Get('/all')
+    @Role(UserRole.ADMIN)
+    async getAllUsers(@Query(ValidationPipe) filterDto: GetAllUsersDto): Promise<User[]> {
+        console.log(filterDto)
+        return this.usersService.getAllUsers(filterDto);
+    }
 
     @Post()
     @Role(UserRole.ADMIN)

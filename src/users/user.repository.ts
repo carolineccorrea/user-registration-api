@@ -10,10 +10,19 @@ import {
 } from '@nestjs/common';
 import { CreateUserDto } from './dtos/create-user.dto';
 import { CredentialsDto } from './dtos/credentials.dto';
+import { GetAllUsersDto } from './dtos/get-users.dto';
 
 
 @EntityRepository(User)
 export class UserRepository extends Repository<User> {
+
+  async getUsers(filterDto: GetAllUsersDto): Promise<User[]>{
+    const query = this.createQueryBuilder('user')
+
+    const users = await query.getMany();
+    return users;
+  }
+
   async createUser(
     createUserDto: CreateUserDto,
     role: UserRole,

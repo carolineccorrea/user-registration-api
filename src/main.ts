@@ -7,7 +7,7 @@ async function bootstrap() {
 
     // Open API
     const options = new DocumentBuilder()
-    .setTitle('NESTJS API CRUD - DESAFIO COOPERSYSTEM ')
+    .setTitle('NESTJS API CRUD - Users')
     .setDescription('API de usuarios')
     .setVersion('1.0.0')
     .addTag('nestjsapi')

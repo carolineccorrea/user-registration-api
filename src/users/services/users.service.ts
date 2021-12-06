@@ -11,6 +11,8 @@ import { CreateUserDto } from '../dtos/create-user.dto';
 import { UserRepository } from '../user.repository';
 import { UpdateUserDto } from '../dtos/update-user.dto';
 import { ChangePasswordDto } from 'src/auth/dtos/change-password.dto';
+import { runInThisContext } from 'vm';
+import { GetAllUsersDto } from '../dtos/get-users.dto';
 
 @Injectable()
 export class UsersService {
@@ -19,12 +21,18 @@ export class UsersService {
     private userRepository: UserRepository,
   ) { }
 
+  private users: User[] = []
+
   async createAdminUser(createUserDto: CreateUserDto): Promise<User> {
     if (createUserDto.password != createUserDto.passwordConfirmation) {
       throw new UnprocessableEntityException('As senhas não conferem');
     } else {
       return this.userRepository.createUser(createUserDto, UserRole.ADMIN);
     }
+  }
+
+  async getAllUsers(filterDto: GetAllUsersDto): Promise <User[]> {
+    return this.userRepository.getUsers(filterDto);
   }
 
   async findUserById(userId: string): Promise<User> {
