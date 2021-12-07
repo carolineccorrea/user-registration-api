@@ -6,7 +6,7 @@
 * [Documentação](#documentação)
 
 ## Informações Gerais
-API em NestJS que consiste em admisnistração de usuários
+API em NestJS que consiste em administração de usuários
 * O Usuário pode fazer um cadastro comum com: nome, email e senha
 * O Usuário terá permissões de login: Administrador ou Comum
 * O Usuário pode fazer login ou logout
