@@ -6,7 +6,13 @@
 * [Documentação](#documentação)
 
 ## Informações Gerais
-API REST com CRUD e autenticação
+API em NestJS que consiste em admisnistração de usuários
+* O Usuário pode fazer um cadastro comum com: nome, email e senha
+* O Usuário terá permissões de login: Administrador ou Comum
+* O Usuário pode fazer login ou logout
+* O Usuário Administrador poderá listar alguns dados dos demais Usuários comuns, mantendo seus dados sensíveis seguros
+* O Usuário pode enviar um email para recuperar sua senha
+
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/carolineccorrea/api-nestjs)
 ![GitHub](https://img.shields.io/github/license/carolineccorrea/api-nestjs)
