@@ -11,6 +11,7 @@ API em NestJS que consiste em administração de usuários
 * O Usuário terá permissões de login: Administrador ou Comum
 * O Usuário pode fazer login ou logout
 * O Usuário Administrador poderá listar alguns dados dos demais Usuários comuns, mantendo seus dados sensíveis seguros
+* O Usuário Comum não tem acesso aos dados dos outros usuários
 * O Usuário pode enviar um email para recuperar sua senha
 
 
